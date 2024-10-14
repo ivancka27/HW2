@@ -7,12 +7,28 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
-        if (a / 10 == 0 && a >= 0) {
-            System.out.println("DIGIT");
-        } else if (a / 100 == 0 && a / 10 != 0 && a > 0) {
-            System.out.println("NUM");
+        int b = in.nextInt();
+        int c = in.nextInt();
+        if (a > b) {
+            if (a > c) {
+                if (b > c) {
+                    System.out.println(c + " " + b + " " + a);
+                } else {
+                    System.out.println(b + " " + c + " " + a);
+                }
+            } else {
+                System.out.println(b + " " + a + " " + c);
+            }
         } else {
-            System.out.println("OTHER");
+            if (b > c) {
+                if (a > c) {
+                    System.out.println(c + " " + a + " " + b);
+                } else {
+                    System.out.println(a + " " + c + " " + b);
+                }
+            } else {
+                System.out.println(a + " " + b + " " + c);
+            }
         }
     }
 }
